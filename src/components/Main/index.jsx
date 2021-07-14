@@ -2,7 +2,6 @@ import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import {defaultUrl,nameUrl,regionUrl} from "../../data"
 import Country from "../Country"
-import {AiOutlineSearch} from "react-icons/ai"
 const Main = ({darkMode}) => {
     const [countries,setCountries] = useState([]);
 
@@ -49,9 +48,8 @@ const Main = ({darkMode}) => {
             <input 
                 type="text"
                 onChange={(e)=>searchByCountry(e.target.value)}
-                className="w-full md:w-2/5 h-12 outline-none shadow px-12 mb-12 dark:bg-gray-600 dark:text-gray-100 dark:placeholder-gray-100"
+                className="w-full md:w-2/5 h-12 outline-none shadow pl-6 mb-12 dark:bg-gray-600 dark:text-gray-100 dark:placeholder-gray-100"
                 placeholder="Search for a country..."/>
-
             <select 
             className="h-12 w-2/3 md:w-1/4 md:ml-7 bg-white dark:bg-gray-600 dark:text-gray-100 outline-none shadow px-4 mb-6"
             onChange={(e)=>searchByRegion(e.target.value)}>
