@@ -45,15 +45,15 @@ const Main = ({darkMode}) => {
 
     return (
         <div className={darkMode ? "dark" : ""}>
-        <div className="px-10 my-10">
+        <div className="px-10 my-10 md:flex md:justify-between">
             <input 
                 type="text"
                 onChange={(e)=>searchByCountry(e.target.value)}
-                className="w-full sm:w-3/5 h-12 outline-none shadow px-12 mb-12 dark:bg-gray-600 dark:text-gray-100 dark:placeholder-gray-100"
+                className="w-full md:w-2/5 h-12 outline-none shadow px-12 mb-12 dark:bg-gray-600 dark:text-gray-100 dark:placeholder-gray-100"
                 placeholder="Search for a country..."/>
 
             <select 
-            className="h-12 w-1/2 bg-white dark:bg-gray-600 dark:text-gray-100 outline-none shadow px-4 mb-6"
+            className="h-12 w-2/3 md:w-1/4 md:ml-7 bg-white dark:bg-gray-600 dark:text-gray-100 outline-none shadow px-4 mb-6"
             onChange={(e)=>searchByRegion(e.target.value)}>
                 <option value="">Filter By Region</option>
                 <option value="africa">Africa</option>

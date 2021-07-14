@@ -4,7 +4,7 @@ import SingleCountry from '../SingleCountry'
 
 const Country = ({countries,darkMode}) => {    
     return (
-        <div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-full">
             {countries.map((item)=>{
                 return(
                     <SingleCountry
