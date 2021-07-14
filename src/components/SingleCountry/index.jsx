@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom"
+import Paragraph from '../Paragraph'
 const SingleCountry = ({darkMode,flag,name,population,region,capital}) => {
     return (
         <div className={darkMode ? "dark" : ""}>
@@ -9,21 +10,11 @@ const SingleCountry = ({darkMode,flag,name,population,region,capital}) => {
             <img src={flag} alt={name} />
             <div className="px-5 pb-5">
             <h1 className="my-3 font-bold text-2xl dark:text-gray-100">{name}</h1>
-                <p className="dark:text-gray-300">
-                    <strong className="dark:text-gray-100">
-                        Population: </strong>
-                    {population}
-                </p>
-                <p className="dark:text-gray-300">
-                    <strong className="dark:text-gray-100">
-                        Region: </strong>
-                    {region}
-                </p>
-                <p className="dark:text-gray-300">
-                    <strong className="dark:text-gray-100">
-                        Capital: </strong> 
-                    {capital}
-                </p>
+
+                <Paragraph desc={"Population"} value={population}/>
+                <Paragraph desc={"Region"} value={region}/>
+                <Paragraph desc={"Capital"} value={capital}/>
+                
             </div>
             </Link>
             </div>

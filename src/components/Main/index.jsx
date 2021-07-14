@@ -4,7 +4,6 @@ import {defaultUrl,nameUrl,regionUrl} from "../../data"
 import Country from "../Country"
 const Main = ({darkMode}) => {
     const [countries,setCountries] = useState([]);
-
     const fetchCountry = async () => {
         try {
             const response = await axios.get(defaultUrl)
@@ -51,7 +50,7 @@ const Main = ({darkMode}) => {
                 className="w-full md:w-2/5 h-12 outline-none shadow pl-6 mb-12 dark:bg-gray-600 dark:text-gray-100 dark:placeholder-gray-100"
                 placeholder="Search for a country..."/>
             <select 
-            className="h-12 w-2/3 md:w-1/4 md:ml-7 bg-white dark:bg-gray-600 dark:text-gray-100 outline-none shadow px-4 mb-6"
+            className="h-12 w-2/3 md:w-1/4 md:ml-7 bg-white dark:bg-gray-600 dark:text-gray-100 outline-none shadow px-4 mb-6 cursor-pointer"
             onChange={(e)=>searchByRegion(e.target.value)}>
                 <option value="">Filter By Region</option>
                 <option value="africa">Africa</option>
