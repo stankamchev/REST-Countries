@@ -1,21 +1,8 @@
 import React,{useEffect,useState} from 'react'
 import axios from "axios"
 import SingleCountry from '../SingleCountry'
-import {defaultUrl} from "../../data"
-const Country = () => {
-    const [countries,setCountries] = useState([])
 
-    useEffect(()=>{
-        async function fetchCountry(){
-        try {
-            const response = await axios.get(defaultUrl)
-            setCountries(response.data)  
-        } catch (error) {
-           console.error(error) 
-        }
-    }
-    fetchCountry()
-    },[])
+const Country = ({countries}) => {    
     return (
         <div>
             {countries.map((item)=>{
