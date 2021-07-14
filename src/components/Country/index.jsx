@@ -1,13 +1,14 @@
 import React,{useEffect,useState} from 'react'
 import axios from "axios"
 import SingleCountry from '../SingleCountry'
+import {defaultUrl} from "../../data"
 const Country = () => {
     const [countries,setCountries] = useState([])
-    const url = "https://restcountries.eu/rest/v2/all"
+
     useEffect(()=>{
         async function fetchCountry(){
         try {
-            const response = await axios.get(url)
+            const response = await axios.get(defaultUrl)
             setCountries(response.data)  
         } catch (error) {
            console.error(error) 
