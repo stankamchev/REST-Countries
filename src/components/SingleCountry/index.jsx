@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SingleCountry = ({darkMode,key,flag,name,population,region,capital}) => {
+const SingleCountry = ({darkMode,flag,name,population,region,capital}) => {
     return (
         <div className={darkMode ? "dark" : ""}>
         <article className="flex justify-center ">
