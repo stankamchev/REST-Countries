@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import axios from "axios"
-import SingleCountry from '../SingleCountry'
+import CountryItem from '../CountryItem'
 
 const Country = ({countries,darkMode}) => {    
     return (
@@ -8,7 +8,7 @@ const Country = ({countries,darkMode}) => {
             {countries.map((item,key)=>{
                 return(
                     <div key={key}>
-                    <SingleCountry
+                    <CountryItem
                         darkMode={darkMode}
                         key={item.name}
                         flag={item.flag}

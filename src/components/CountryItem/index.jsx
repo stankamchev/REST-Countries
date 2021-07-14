@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 import Paragraph from '../Paragraph'
-const SingleCountry = ({darkMode,flag,name,population,region,capital}) => {
+const CountryItem = ({darkMode,flag,name,population,region,capital}) => {
     return (
         <div className={darkMode ? "dark" : ""}>
         <article className="flex justify-center ">
@@ -24,4 +24,4 @@ const SingleCountry = ({darkMode,flag,name,population,region,capital}) => {
     )
 }
 
-export default SingleCountry
+export default CountryItem
