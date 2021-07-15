@@ -1,7 +1,7 @@
 import React,{useState} from "react"
 import Navbar from "./components/Navbar"
-import Main from "./components/Main";
-import CountryPage from "./components/CountryPage";
+import HomePage from "./components/HomePage";
+import CountryPage from "./components/CountryPage/index";
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,7 +16,7 @@ function App() {
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode}/>
         <Switch>
           <Route exact path="/">
-            <Main darkMode={darkMode}/>
+            <HomePage darkMode={darkMode}/>
           </Route>
           <Route path="/country/:id">
             <CountryPage />

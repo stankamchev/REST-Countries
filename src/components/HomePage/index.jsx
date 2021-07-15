@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import {defaultUrl,nameUrl,regionUrl} from "../../data"
-import Country from "../Country"
+import Country from "./Country"
 const Main = ({darkMode}) => {
     const [countries,setCountries] = useState([]);
     const fetchCountry = async () => {

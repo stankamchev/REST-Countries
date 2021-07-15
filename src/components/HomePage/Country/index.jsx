@@ -1,7 +1,5 @@
-import React,{useEffect,useState} from 'react'
-import axios from "axios"
-import CountryItem from '../CountryItem'
-
+import React from 'react'
+import CountryItem from "../CountryItem"
 const Country = ({countries,darkMode}) => {    
     return (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-full">

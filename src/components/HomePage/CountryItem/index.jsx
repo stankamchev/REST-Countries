@@ -1,9 +1,9 @@
 import React from 'react'
 import {Link} from "react-router-dom"
-import Paragraph from '../Paragraph'
+import Paragraph from "../../Paragraph"
 const CountryItem = ({darkMode,flag,name,population,region,capital}) => {
     return (
-        <div className={darkMode ? "dark" : ""}>
+        <div>
         <article className="flex justify-center ">
         <div className="flex-col w-4/6 xl:w-64 max-w-sm bg-white dark:bg-gray-600 rounded-md mb-10 shadow-md cursor-pointer">
             <Link to={`/country/${name}`}>
