@@ -2,10 +2,10 @@ import React from 'react'
 import Paragraph from '../../Paragraph';
 const CountryPageItem = (props) => {
     const currency = props.currencies.map((item)=>{
-        return item.name + ""
+        return item.name
     })
     const languages = props.languages.map((item)=>{
-        return item.name + ""
+        return item.name
     })
     return (
         <div>
@@ -21,11 +21,13 @@ const CountryPageItem = (props) => {
                         <Paragraph desc={"Population"} value={props.population}/>
                         <Paragraph desc={"Region"} value={props.region}/>
                         <Paragraph desc={"Subregion"} value={props.subregion}/>
-                    <div className="flex mt-10 items-center">
+                    <div className="grid grid-cols-1 mt-10 items-center">
                         <Paragraph desc={"Border Countries"}/>
-                        <div className="flex">{props.borders.map((item)=>{
+                        <div className="flex gap-x-3">{props.borders.map((item,key)=>{
                             return(
-                                <span className="px-7 mx-2 bg-white shadow dark:bg-gray-600 rounded">
+                                <span
+                                key={key} 
+                                className="w-20 px-7 bg-white shadow dark:bg-gray-600 cursor-pointer rounded my-2">
                                     {item + " "}
                                 </span>
                             )
@@ -34,8 +36,8 @@ const CountryPageItem = (props) => {
                     </div>
                     <div className="pb-10">
                         <Paragraph desc={"Top Level Domain"} value={props.topLevelDomain}/>
-                        <Paragraph desc={"Currencies"} value={currency}/>
-                        <Paragraph desc={"Languages"} value={languages}/>       
+                        <Paragraph desc={"Currencies"} value={currency + " "}/>
+                        <Paragraph desc={"Languages"} value={languages + " "}/>       
                     </div>
                 </article>
                 </div>

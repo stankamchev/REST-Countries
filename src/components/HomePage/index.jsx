@@ -7,7 +7,7 @@ const Main = ({darkMode}) => {
     const fetchCountry = async () => {
         try {
             const response = await axios.get(defaultUrl)
-            setCountries(response.data)  
+            setCountries(response.data)
         } catch (error) {
            console.error(error) 
         }
@@ -15,7 +15,6 @@ const Main = ({darkMode}) => {
     useEffect(()=>{
         fetchCountry()
     },[])
-
     const searchByCountry = async (query) => {
         if(query.length < 3 || query === ""){
             fetchCountry()
